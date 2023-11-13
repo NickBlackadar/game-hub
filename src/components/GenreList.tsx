@@ -25,6 +25,26 @@ const GenreList = () => {
         Genres
       </Heading>
       <List>
+        <ListItem key="0" paddingY="5px">
+          <HStack>
+            <Image
+              boxSize="32px"
+              borderRadius={8}
+              objectFit="cover"
+              src={getCroppedImageUrl("")}
+            />
+            <Button
+              fontWeight={undefined === selectedGenreId ? "bold" : "normal"}
+              fontSize="lg"
+              variant="link"
+              onClick={() => setGenreId(undefined)}
+              whiteSpace="normal"
+              textAlign="left"
+            >
+              All
+            </Button>
+          </HStack>
+        </ListItem>
         {data?.results.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
             <HStack>
