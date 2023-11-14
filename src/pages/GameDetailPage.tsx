@@ -15,7 +15,7 @@ const GameDetailPage = () => {
   if (error || !game) throw error;
 
   return (
-    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
+    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5} padding={5}>
       <GridItem>
         <Heading>{game.name}</Heading>
         <ExpandableText description={game.description_raw} />
