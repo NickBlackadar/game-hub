@@ -9,7 +9,7 @@ export interface FetchResponse<T> {
 const axiosInstance = axios.create({
   baseURL: "https://api.rawg.io/api",
   params: {
-    key: "2f756dec81784ee484756c7f2f1bb5a6",
+    key: import.meta.env.VITE_API_KEY,
   },
 });
 
